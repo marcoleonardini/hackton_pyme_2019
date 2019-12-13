@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hackaton_pyme_2019/ui/pages/efective/efective.dart';
+import 'package:hackaton_pyme_2019/ui/pages/incomes/incomes.dart';
+import 'package:hackaton_pyme_2019/ui/pages/insumeForm/insume_form_screen.dart';
+import 'package:hackaton_pyme_2019/ui/pages/productForm/product_form_screen.dart';
+import 'package:hackaton_pyme_2019/ui/pages/sales/sales.dart';
 import 'ui/pages/home.page.dart';
 import 'ui/pages/inventory/inventory.dart';
 
@@ -40,7 +44,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         'inventory': (context) => Inventory(),
-        'efective': (context) => Efective()
+        'efective': (context) => Efective(),
+        'sales' : (context) => SalesScreen(),
+        'incomes' : (context) => IncomesScreen(),
+        'productForm' : (context) => ProductFormScreen(),
+        'insumeForm'  : (context) => InsumeFormScreen()
       },
     );
   }
