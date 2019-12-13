@@ -1,6 +1,13 @@
+import 'dart:async';
+
 import 'package:hackaton_pyme_2019/models/insume.dart';
 
 List<Insume> products = [_product1, _product2, _product3];
+
+Future<List<Insume>> getProducts() {
+  return Future.delayed(Duration(milliseconds: 1500))
+      .then((onValue) => products);
+}
 
 Insume _product1 = Insume(
     nombre: 'Amortiguador',
