@@ -1,5 +1,4 @@
 class Insume{
-
   String id;
   String nombre;
   int cantidad;

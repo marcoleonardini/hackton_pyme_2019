@@ -4,15 +4,17 @@ import 'package:hackaton_pyme_2019/data/example/insumes.dart' as proex;
 import 'package:hackaton_pyme_2019/ui/pages/inventory/widgets/card_view_product.dart';
 
 class Inventory extends StatelessWidget {
-
-  void _search(){}
+  void _search() {}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: Icon(CupertinoIcons.back, color: Colors.black),
+        ),
         actions: <Widget>[
           IconButton(
             onPressed: _search,
