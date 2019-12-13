@@ -44,7 +44,7 @@ class _IncomesScreen extends State<IncomesScreen> {
                       ),
                       CustomButton(
                         child: Text('Registro Manual'),
-                        onPressed: () { print("Manual"); },
+                        onPressed: () { showOwnDialog(context); },
                         backgroundColor: Colors.blueAccent,
                         textColor: Colors.white,
                         icon: Icon(Icons.book)
@@ -59,6 +59,34 @@ class _IncomesScreen extends State<IncomesScreen> {
       ),
     );
   }
+  
+  void showOwnDialog(context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+           content: Text("¿Desea registrar un producto o un insumo? :"),
+           actions: <Widget>[
+             FlatButton(
+               child: Text("Producto"),
+               onPressed: () {
+                 Navigator.pop(context);
+                 Navigator.pushNamed(context, 'productForm');
+               }
+             ),
+             FlatButton(
+               child: Text("Insumo"),
+               onPressed: () {
+                 Navigator.pop(context);
+                 Navigator.pushNamed(context, 'insumeForm');
+               }
+             ),
+           ],
+        );
+      }
+    );
+  }
+
 
 
   void _onQRViewCreated(QRViewController controller) {

@@ -44,7 +44,7 @@ class _SalesScreenState extends State<SalesScreen> {
                       ),
                       CustomButton(
                         child: Text('Registro Manual'),
-                        onPressed: () { print("Manual"); },
+                        onPressed: () { showOwnDialog(context); },
                         backgroundColor: Colors.blueAccent,
                         textColor: Colors.white,
                         icon: Icon(Icons.book)
@@ -57,6 +57,27 @@ class _SalesScreenState extends State<SalesScreen> {
           )
         ],
       ),
+    );
+  }
+
+  void showOwnDialog(context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+           content: Text("¿Desea registrar un producto o un insumo? :"),
+           actions: <Widget>[
+             FlatButton(
+               child: Text("Producto"),
+               onPressed: () => Navigator.pushNamed(context, 'productForm')
+             ),
+             FlatButton(
+               child: Text("Insumo"),
+               onPressed: () => Navigator.pushNamed(context, 'insumeForm'),
+             ),
+           ],
+        );
+      }
     );
   }
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hackaton_pyme_2019/ui/pages/incomes.dart';
-import 'package:hackaton_pyme_2019/ui/pages/sales.dart';
+import 'package:hackaton_pyme_2019/ui/pages/incomes/incomes.dart';
+import 'package:hackaton_pyme_2019/ui/pages/insumeForm/insume_form_screen.dart';
+import 'package:hackaton_pyme_2019/ui/pages/productForm/product_form_screen.dart';
+import 'package:hackaton_pyme_2019/ui/pages/sales/sales.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +19,9 @@ class MyApp extends StatelessWidget {
       initialRoute: 'incomes',
       routes: {
         'sales'   : (context) => SalesScreen(),
-        'incomes' : (context) => IncomesScreen()
+        'incomes' : (context) => IncomesScreen(),
+        'productForm' : (context) => ProductFormScreen(),
+        'insumeForm' : (context) => InsumeFormScreen()
       },
     );
   }
