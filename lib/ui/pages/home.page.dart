@@ -37,11 +37,12 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text('INVENTARIO', style: Theme.of(context).textTheme.display1),
+                    Text('INVENTARIO',
+                        style: Theme.of(context).textTheme.display1),
                     Container(
                       // width: 280.0,
                       child: Text(
-                        'Informacion detallada, ordenada y valorada de los productos/ítems',
+                        'Obtén informacion detallada, ordenada y valorada de tus productos/ítems',
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -67,43 +68,39 @@ class HomePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Text('INGRESOS', style: Theme.of(context).textTheme.display1),
-                Image.asset('assets/in.png', width: 64),
-                // Icon(
-                //   Icons.call_missed_outgoing,
-                //   size: 48,
-                // ),
-                Container(
-                  width: 140.0,
-                  //padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    'Registro de ingresos de productos/items en el sistema',
-                    textAlign: TextAlign.center,
+            GestureDetector(
+              onTap: () => Navigator.pushNamed(context, 'sales'),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Text('INGRESOS', style: Theme.of(context).textTheme.display1),
+                  Image.asset('assets/in.png', width: 64),
+                  Container(
+                    width: 140.0,
+                    child: Text(
+                      'Registra tu ingresos de productos/items en el sistema',
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             VerticalDivider(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Text('SALIDAS', style: Theme.of(context).textTheme.display1),
-                Image.asset('assets/out.png', width: 64.0),
-                // Icon(
-                //   Icons.call_missed_outgoing,
-                //   size: 48,
-                // ),
-                Container(
-                  width: 140.0,
-                  // padding: EdgeInsets.all(8.0),
-                  child: Text(
-                      'Registro de salidas de productos/items en el sistema',
-                      textAlign: TextAlign.center),
-                ),
-              ],
+            GestureDetector(
+              onTap: () => Navigator.pushNamed(context, 'sales'),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Text('SALIDAS', style: Theme.of(context).textTheme.display1),
+                  Image.asset('assets/out.png', width: 64.0),
+                  Container(
+                    width: 140.0,
+                    child: Text(
+                        'Registra tus salidas de productos/items en el sistema',
+                        textAlign: TextAlign.center),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -131,7 +128,7 @@ class HomePage extends StatelessWidget {
                     Container(
                       width: 280.0,
                       child: Text(
-                        'Informe que presenta un detalle del flujo de ingresos y egresos de dinero en un período dado',
+                        'Obtén un informe del detalle de tu flujo de ingresos y egresos de dinero en un período que selecciones',
                         textAlign: TextAlign.center,
                       ),
                     ),
