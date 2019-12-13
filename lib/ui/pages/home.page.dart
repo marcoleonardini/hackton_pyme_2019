@@ -11,11 +11,11 @@ class HomePage extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: <Widget>[
-              _inventarios(),
+              _inventarios(context),
               Divider(),
               _gestion(),
               Divider(),
-              _flujoDeCaja(),
+              _flujoDeCaja(context),
             ],
           ),
         ),
@@ -23,43 +23,46 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _inventarios() {
+  Widget _inventarios(BuildContext context) {
     return Expanded(
-      child: Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Flexible(
-              flex: 3,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    'INVENTARIO',
-                    style: TextStyle(fontSize: 32.0),
-                  ),
-                  Container(
-                    // width: 280.0,
-                    child: Text(
-                      'Informacion detallada, ordenada y valorada de los productos/ítems',
-                      textAlign: TextAlign.center,
+      child: GestureDetector(
+        onTap: () => Navigator.pushNamed(context, 'inventory'),
+        child: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Flexible(
+                flex: 3,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'INVENTARIO',
+                      style: TextStyle(fontSize: 32.0),
                     ),
-                  ),
-                ],
+                    Container(
+                      // width: 280.0,
+                      child: Text(
+                        'Informacion detallada, ordenada y valorada de los productos/ítems',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Flexible(
-              flex: 1,
-              child: Image.asset(
-                'assets/stock.png',
-                width: 64,
-              ),
-            )
-            // Icon(
-            //   Icons.inbox,
-            //   size: 56,
-            // ),
-          ],
+              Flexible(
+                flex: 1,
+                child: Image.asset(
+                  'assets/stock.png',
+                  width: 64,
+                ),
+              )
+              // Icon(
+              //   Icons.inbox,
+              //   size: 56,
+              // ),
+            ],
+          ),
         ),
       ),
     );
@@ -128,7 +131,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _flujoDeCaja() {
+  Widget _flujoDeCaja(BuildContext context) {
     return Expanded(
       child: Container(
         child: Row(
@@ -155,6 +158,7 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       'Informe que presenta un detalle del flujo de ingresos y egresos de dinero en un período dado',
                       textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.body2,
                     ),
                   ),
                 ],
