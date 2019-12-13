@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:hackaton_pyme_2019/ui/pages/inventory/inventory.dart';
+import 'ui/pages/home.page.dart';
+import 'ui/pages/inventory/inventory.dart';
 
-void main() {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark));
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -21,13 +14,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme: TextTheme(
-              body1: TextStyle(color: Colors.black, fontSize: 18.0,fontWeight: FontWeight.w300),
-              body2: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold,fontSize: 16.0),
+              body1: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w300),
+              body2: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16.0),
               title: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w300,
                   fontSize: 24.0))),
-      home: Inventory(),
+      routes: {
+        '/': (context) => HomePage(),
+        'inventory': (context) => Inventory()
+      },
     );
   }
 }
