@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1048499669163",
+    "firebase_url": "https://hackaton-pyme-2019.firebaseio.com",
+    "project_id": "hackaton-pyme-2019",
+    "storage_bucket": "hackaton-pyme-2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048499669163:android:ba61dd2329f27432a78fee",
+        "android_client_info": {
+          "package_name": "com.example.hackaton_pyme_2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048499669163-na70af1ubjkfuqh4de2r7228jcnmti1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAykMmVfSnJL22hNdoiQNj_O2wp7-xk7kY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048499669163-na70af1ubjkfuqh4de2r7228jcnmti1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
