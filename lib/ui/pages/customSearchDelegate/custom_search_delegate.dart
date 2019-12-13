@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackaton_pyme_2019/models/insume.dart';
 import 'package:hackaton_pyme_2019/ui/pages/inventory/widgets/card_view_product.dart';
@@ -6,6 +7,7 @@ import 'package:hackaton_pyme_2019/data/example/insumes.dart' as proex;
 class CustomSearchDelegate extends SearchDelegate {
   @override
   String get searchFieldLabel => 'Que deseas buscar?';
+
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
@@ -21,7 +23,7 @@ class CustomSearchDelegate extends SearchDelegate {
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
-      icon: Icon(Icons.arrow_back),
+      icon: Icon(CupertinoIcons.back),
       onPressed: () {
         close(context, null);
       },
