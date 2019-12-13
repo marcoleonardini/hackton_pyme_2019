@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hackaton_pyme_2019/ui/pages/efective/efective.dart';
 import 'ui/pages/home.page.dart';
 import 'ui/pages/inventory/inventory.dart';
 
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
                   fontSize: 24.0))),
       routes: {
         '/': (context) => HomePage(),
-        'inventory': (context) => Inventory()
+        'inventory': (context) => Inventory(),
+        'efective':(context) => Efective()
       },
     );
   }
