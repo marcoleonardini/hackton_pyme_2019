@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hackaton_pyme_2019/ui/pages/incomes.dart';
+import 'package:hackaton_pyme_2019/ui/pages/sales.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,6 +14,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: 'incomes',
+      routes: {
+        'sales'   : (context) => SalesScreen(),
+        'incomes' : (context) => IncomesScreen()
+      },
     );
   }
 }
