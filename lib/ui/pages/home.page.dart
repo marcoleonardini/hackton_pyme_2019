@@ -29,25 +29,31 @@ class HomePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'INVENTARIO',
-                  style: TextStyle(fontSize: 32.0),
-                ),
-                Container(
-                  width: 280.0,
-                  child: Text(
-                    'Informacion detallada, ordenada y valorada de los productos/ítems',
-                    textAlign: TextAlign.center,
+            Flexible(
+              flex: 3,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'INVENTARIO',
+                    style: TextStyle(fontSize: 32.0),
                   ),
-                ),
-              ],
+                  Container(
+                    // width: 280.0,
+                    child: Text(
+                      'Informacion detallada, ordenada y valorada de los productos/ítems',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Image.asset(
-              'assets/stock.png',
-              width: 64,
+            Flexible(
+              flex: 1,
+              child: Image.asset(
+                'assets/stock.png',
+                width: 64,
+              ),
             )
             // Icon(
             //   Icons.inbox,
@@ -128,25 +134,31 @@ class HomePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Image.asset(
-              'assets/cash.png',
-              width: 64.0,
+            Flexible(
+              flex: 1,
+              child: Image.asset(
+                'assets/cash.png',
+                width: 64.0,
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'EFECTIVO',
-                  style: TextStyle(fontSize: 32.0),
-                ),
-                Container(
-                  width: 280.0,
-                  child: Text(
-                    'Informe que presenta un detalle del flujo de ingresos y egresos de dinero en un período dado',
-                    textAlign: TextAlign.center,
+            Flexible(
+              flex: 3,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'EFECTIVO',
+                    style: TextStyle(fontSize: 32.0),
                   ),
-                ),
-              ],
+                  Container(
+                    width: 280.0,
+                    child: Text(
+                      'Informe que presenta un detalle del flujo de ingresos y egresos de dinero en un período dado',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
             ),
             // Icon(
             //   Icons.inbox,
