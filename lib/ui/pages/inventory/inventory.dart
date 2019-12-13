@@ -1,10 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackaton_pyme_2019/data/example/insumes.dart' as proex;
+import 'package:hackaton_pyme_2019/ui/pages/customSearchDelegate/custom_search_delegate.dart';
 import 'package:hackaton_pyme_2019/ui/pages/inventory/widgets/card_view_product.dart';
 
 class Inventory extends StatelessWidget {
-  void _search() {}
+  void _search(BuildContext context) {
+    showSearch(
+      context: context,
+      delegate: CustomSearchDelegate(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +23,7 @@ class Inventory extends StatelessWidget {
         ),
         actions: <Widget>[
           IconButton(
-            onPressed: _search,
+            onPressed: () => _search(context),
             icon: Icon(
               CupertinoIcons.search,
               color: Colors.black,
