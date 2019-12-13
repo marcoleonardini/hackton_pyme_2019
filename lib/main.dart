@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           textTheme: TextTheme(
+              display1: TextStyle(
+                  fontSize: 28, fontFamily: 'PatrickHand', color: Colors.black,fontWeight: FontWeight.bold),
               subtitle: TextStyle(
                   color: Colors.black,
                   fontSize: 18.0,
@@ -31,13 +33,14 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 16.0),
               title: TextStyle(
+                  fontFamily: 'PatrickHand',
                   color: Colors.black,
                   fontWeight: FontWeight.w300,
                   fontSize: 24.0))),
       routes: {
         '/': (context) => HomePage(),
         'inventory': (context) => Inventory(),
-        'efective':(context) => Efective()
+        'efective': (context) => Efective()
       },
     );
   }

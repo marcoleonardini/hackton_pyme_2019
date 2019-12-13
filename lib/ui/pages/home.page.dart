@@ -37,10 +37,7 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text(
-                      'INVENTARIO',
-                      style: TextStyle(fontSize: 32.0),
-                    ),
+                    Text('INVENTARIO', style: Theme.of(context).textTheme.display1),
                     Container(
                       // width: 280.0,
                       child: Text(
@@ -52,12 +49,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Flexible(
-                flex: 1,
-                child: Image.asset(
-                  'assets/stock.png',
-                  width: 64,
-                ),
-              )
+                  flex: 1, child: Image.asset('assets/stock.png', width: 64))
               // Icon(
               //   Icons.inbox,
               //   size: 56,
@@ -78,14 +70,8 @@ class HomePage extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Text(
-                  'INGRESOS',
-                  style: TextStyle(fontSize: 28.0),
-                ),
-                Image.asset(
-                  'assets/in.png',
-                  width: 64,
-                ),
+                Text('INGRESOS', style: Theme.of(context).textTheme.display1),
+                Image.asset('assets/in.png', width: 64),
                 // Icon(
                 //   Icons.call_missed_outgoing,
                 //   size: 48,
@@ -104,14 +90,8 @@ class HomePage extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                Text(
-                  'SALIDAS',
-                  style: TextStyle(fontSize: 28.0),
-                ),
-                Image.asset(
-                  'assets/out.png',
-                  width: 64.0,
-                ),
+                Text('SALIDAS', style: Theme.of(context).textTheme.display1),
+                Image.asset('assets/out.png', width: 64.0),
                 // Icon(
                 //   Icons.call_missed_outgoing,
                 //   size: 48,
@@ -120,9 +100,8 @@ class HomePage extends StatelessWidget {
                   width: 140.0,
                   // padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Registro de salidas de productos/items en el sistema',
-                    textAlign: TextAlign.center,
-                  ),
+                      'Registro de salidas de productos/items en el sistema',
+                      textAlign: TextAlign.center),
                 ),
               ],
             ),
@@ -141,27 +120,19 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Flexible(
-                flex: 1,
-                child: Image.asset(
-                  'assets/cash.png',
-                  width: 64.0,
-                ),
-              ),
+                  flex: 1, child: Image.asset('assets/cash.png', width: 64.0)),
               Flexible(
                 flex: 3,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text(
-                      'EFECTIVO',
-                      style: TextStyle(fontSize: 32.0),
-                    ),
+                    Text('EFECTIVO',
+                        style: Theme.of(context).textTheme.display1),
                     Container(
                       width: 280.0,
                       child: Text(
                         'Informe que presenta un detalle del flujo de ingresos y egresos de dinero en un período dado',
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.body2,
                       ),
                     ),
                   ],
