@@ -32,8 +32,8 @@ class _SalesScreenState extends State<SalesScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text("REGISTRA UNA VENTA"),
-                  SizedBox(height: 40.0,),
-                  Row(
+                  SizedBox(height: 20.0,),
+                  Column(
                     children: <Widget>[
                       CustomButton(
                         child: Text('Historial'),

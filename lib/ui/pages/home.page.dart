@@ -69,7 +69,9 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             GestureDetector(
-              onTap: () => Navigator.pushNamed(context, 'sales'),
+              onTap: () { 
+                Navigator.pushNamed(context, 'incomes');
+              },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
@@ -87,7 +89,9 @@ class HomePage extends StatelessWidget {
             ),
             VerticalDivider(),
             GestureDetector(
-              onTap: () => Navigator.pushNamed(context, 'sales'),
+              onTap: () { 
+                Navigator.pushNamed(context, 'sales');
+              },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[

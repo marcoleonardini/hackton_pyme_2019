@@ -49,6 +49,9 @@ flutter:
     - assets/out.png
     - assets/stock.png
     - assets/cash.png
+    - assets/amortiguadores.jpg
+    - assets/filtros.jpeg
+    - assets/rodamientos.jpeg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

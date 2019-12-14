@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hackaton_pyme_2019/ui/pages/efective/efective.dart';
 import 'package:hackaton_pyme_2019/ui/pages/incomes/incomes.dart';
-import 'package:hackaton_pyme_2019/ui/pages/insumeForm/insume_form_screen.dart';
-import 'package:hackaton_pyme_2019/ui/pages/productForm/product_form_screen.dart';
+import 'package:hackaton_pyme_2019/ui/pages/productDetail/product_detail_screen.dart';
 import 'package:hackaton_pyme_2019/ui/pages/sales/sales.dart';
 import 'ui/pages/home.page.dart';
 import 'ui/pages/inventory/inventory.dart';
+import 'ui/pages/productForm/product_form_screen.dart';
+import 'ui/pages/insumeForm/insume_form_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -48,7 +49,8 @@ class MyApp extends StatelessWidget {
         'sales' : (context) => SalesScreen(),
         'incomes' : (context) => IncomesScreen(),
         'productForm' : (context) => ProductFormScreen(),
-        'insumeForm'  : (context) => InsumeFormScreen()
+        'insumeForm'  : (context) => InsumeFormScreen(),
+        'productDetail' : (context) => ProductDetailScreen()
       },
     );
   }
