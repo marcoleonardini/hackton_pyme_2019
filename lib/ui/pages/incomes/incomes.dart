@@ -38,15 +38,15 @@ class _IncomesScreen extends State<IncomesScreen> {
                       CustomButton(
                         child: Text('Historial'),
                         onPressed: () { print("Historial"); },
-                        backgroundColor: Colors.blueAccent,
-                        textColor: Colors.white,
+                        backgroundColor: Colors.white,
+                        textColor: Colors.black,
                         icon: Icon(Icons.history),
                       ),
                       CustomButton(
                         child: Text('Registro Manual'),
                         onPressed: () { showOwnDialog(context); },
-                        backgroundColor: Colors.blueAccent,
-                        textColor: Colors.white,
+                        backgroundColor: Colors.white,
+                        textColor: Colors.black,
                         icon: Icon(Icons.book)
                       ),
                     ],

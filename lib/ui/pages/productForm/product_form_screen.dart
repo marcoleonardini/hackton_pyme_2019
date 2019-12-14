@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackaton_pyme_2019/ui/widgets/custom_button.dart';
 import 'package:hackaton_pyme_2019/ui/widgets/custom_input_field.dart';
@@ -30,7 +31,15 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Añade un nuevo producto"),
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: Icon(CupertinoIcons.back, color: Colors.black),
+        ),
+        brightness: Brightness.light,
+        title: Text("Añade un nuevo producto", style: Theme.of(context).textTheme.title),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
@@ -41,7 +50,7 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
               width: 140.0,
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Colors.blue,
+                  color: Colors.black,
                   style: BorderStyle.solid,
                   width: 4.0
                 ),
@@ -53,8 +62,8 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
             CustomButton(
               child: Text("Selecciona una imagen"),
               icon: Icon(Icons.image),
-              textColor: Colors.white,
-              backgroundColor: Colors.blue,
+              textColor: Colors.black,
+              backgroundColor: Colors.white,
               onPressed: () {},
             ),
             SizedBox(height: 10.0,),
@@ -93,8 +102,8 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
             CustomButton(
               child: Text("Guardar"),
               icon: Icon(Icons.save),
-              textColor: Colors.white,
-              backgroundColor: Colors.blue,
+              textColor: Colors.black,
+              backgroundColor: Colors.white,
               onPressed: () {},
             ),
           ],
