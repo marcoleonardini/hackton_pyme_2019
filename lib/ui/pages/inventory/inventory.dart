@@ -2,13 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackaton_pyme_2019/data/example/insumes.dart' as proex;
 import 'package:hackaton_pyme_2019/ui/pages/inventory/widgets/card_view_product.dart';
+import 'package:hackaton_pyme_2019/ui/pages/voice_chat/voice_chat.dart';
 
 class Inventory extends StatelessWidget {
   void _search() {}
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.push(context,
+            MaterialPageRoute(builder: (context) => MyHomePageVoice(title: 'Asistente',))),
+        child: Icon(Icons.voice_chat),
+      ),
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(

@@ -41,11 +41,10 @@ class CardBalance extends StatelessWidget {
           SizedBox(height: 8.0),
           progress
               ? Row(children: <Widget>[
-                  Expanded(child: Controlador(color: Colors.white, tamano: 66)),
+                  Expanded(child: Controlador(color: Colors.white, tamano: sales*80/7000)),
                   Icon(Icons.info, size: 24.0, color: Colors.white)
                 ])
               : Container(),
-          //Expanded(child: SizedBox())
         ],
       ),
     );
