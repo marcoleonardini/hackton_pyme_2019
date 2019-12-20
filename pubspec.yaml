@@ -51,6 +51,8 @@ flutter:
     - assets/amortiguadores.jpg
     - assets/filtros.jpeg
     - assets/rodamientos.jpeg
+    - assets/settings.png
+    - assets/man.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

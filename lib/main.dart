@@ -28,7 +28,23 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           textTheme: TextTheme(
               display1: TextStyle(
-                  fontSize: 28, fontFamily: 'PatrickHand', color: Colors.black,fontWeight: FontWeight.bold),
+                fontSize: 28,
+                fontFamily: 'PatrickHand',
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+              display2: TextStyle(
+                fontSize: 16,
+                fontFamily: 'PatrickHand',
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+              display3: TextStyle(
+                fontSize: 12,
+                // fontFamily: 'PatrickHand',
+                color: Colors.black87,
+                // fontWeight: FontWeight.bold,
+              ),
               subtitle: TextStyle(
                   color: Colors.black,
                   fontSize: 18.0,
@@ -46,11 +62,11 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomePage(),
         'inventory': (context) => Inventory(),
         'efective': (context) => Efective(),
-        'sales' : (context) => SalesScreen(),
-        'incomes' : (context) => IncomesScreen(),
-        'productForm' : (context) => ProductFormScreen(),
-        'insumeForm'  : (context) => InsumeFormScreen(),
-        'productDetail' : (context) => ProductDetailScreen()
+        'sales': (context) => SalesScreen(),
+        'incomes': (context) => IncomesScreen(),
+        'productForm': (context) => ProductFormScreen(),
+        'insumeForm': (context) => InsumeFormScreen(),
+        'productDetail': (context) => ProductDetailScreen()
       },
     );
   }
