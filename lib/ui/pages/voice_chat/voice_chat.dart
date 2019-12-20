@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dialogflow/dialogflow.dart';
 
@@ -29,7 +30,7 @@ class _MyHomePageVoiceState extends State<MyHomePageVoice> {
             new Container(
               margin: new EdgeInsets.symmetric(horizontal: 4.0),
               child: new IconButton(
-                  icon: new Icon(Icons.send,color: Colors.green,),
+                  icon: new Icon(Icons.send,color: Colors.teal,),
                   onPressed: () => _handleSubmitted(_textController.text)),
             ),
           ],
@@ -39,7 +40,7 @@ class _MyHomePageVoiceState extends State<MyHomePageVoice> {
   }
   void Response(query) async {
     _textController.clear();
-    Dialogflow dialogflow =Dialogflow(token: "9797ae7b21ef4bd39e9ec55380b808f5");
+    Dialogflow dialogflow =Dialogflow(token: "af8465fd0b1742b3bf5da8e48728f272");
     AIResponse response = await dialogflow.sendQuery(query);
     ChatMessage message = new ChatMessage(
       text: response.getMessageResponse(),
@@ -66,9 +67,17 @@ class _MyHomePageVoiceState extends State<MyHomePageVoice> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
-        backgroundColor: Colors.green,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: Icon(CupertinoIcons.back, color: Colors.black),
+        ),
+        brightness: Brightness.light,
+        title: Text('Mi Asistente', style: Theme.of(context).textTheme.title),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
       body: new Column(children: <Widget>[
         new Flexible(
