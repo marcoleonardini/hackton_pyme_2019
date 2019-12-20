@@ -19,7 +19,7 @@ class Inventory extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => MyHomePageVoice(title: 'Asistente',))),
-        child: Icon(Icons.voice_chat),
+        child: Icon(Icons.mic),
       ),
       backgroundColor: Colors.white,
       appBar: AppBar(

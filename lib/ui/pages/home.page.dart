@@ -173,7 +173,7 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: GestureDetector(
-                onTap: () {},
+                onTap: () =>Navigator.pushNamed(context, 'providers'),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
