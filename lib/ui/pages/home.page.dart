@@ -10,15 +10,29 @@ class HomePage extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          child: Column(
-            children: <Widget>[
-              _inventarios(context),
-              Divider(),
-              _gestion(context),
-              Divider(),
-              _flujoDeCaja(context),
-            ],
-          ),
+          child: Column(children: <Widget>[
+            Flexible(
+              flex: 9,
+              child: Column(
+                children: <Widget>[
+                  _inventarios(context),
+                  Divider(),
+                  _gestion(context),
+                  Divider(),
+                  _flujoDeCaja(context),
+                ],
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              child: Column(
+                children: <Widget>[
+                  Divider(),
+                  _config(context),
+                ],
+              ),
+            ),
+          ]),
         ),
       ),
     );
@@ -44,6 +58,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         'Obtén informacion detallada, ordenada y valorada de tus productos/ítems',
                         textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.display3,
                       ),
                     ),
                   ],
@@ -78,8 +93,9 @@ class HomePage extends StatelessWidget {
                   Container(
                     width: 140.0,
                     child: Text(
-                      'Registra tu ingresos de productos/items en el sistema',
+                      'Registra tus ingresos de productos/ítems en el sistema',
                       textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.display3,
                     ),
                   ),
                 ],
@@ -96,8 +112,10 @@ class HomePage extends StatelessWidget {
                   Container(
                     width: 140.0,
                     child: Text(
-                        'Registra tus salidas de productos/items en el sistema',
-                        textAlign: TextAlign.center),
+                      'Registra tus salidas de productos/ítems en el sistema',
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.display3,
+                    ),
                   ),
                 ],
               ),
@@ -128,19 +146,59 @@ class HomePage extends StatelessWidget {
                     Container(
                       width: 280.0,
                       child: Text(
-                        'Obtén un informe del detalle de tu flujo de ingresos y egresos de dinero en un período que selecciones',
+                        'Obtén un informe de tu flujo de ingresos y salidas de dinero en un período de tiempo',
                         textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.display3,
                       ),
                     ),
                   ],
                 ),
               ),
-              // Icon(
-              //   Icons.inbox,
-              //   size: 56,
-              // ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _config(BuildContext context) {
+    return Expanded(
+      child: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Expanded(
+              child: GestureDetector(
+                onTap: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset('assets/man.png', width: 28),
+                    Text('PROVEEDORES',
+                        style: Theme.of(context).textTheme.display2),
+                  ],
+                ),
+              ),
+            ),
+            VerticalDivider(),
+            Expanded(
+              child: GestureDetector(
+                onTap: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset('assets/settings.png', width: 28.0),
+                    Text('CONFIGURACIÓN',
+                        style: Theme.of(context).textTheme.display2),
+                    // Container(
+                    //   child:
+                    //       Text('Configura tu App', textAlign: TextAlign.center),
+                    // ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
