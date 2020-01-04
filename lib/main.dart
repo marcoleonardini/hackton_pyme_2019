@@ -11,9 +11,6 @@ import 'ui/pages/productForm/product_form_screen.dart';
 import 'ui/pages/insumeForm/insume_form_screen.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark));
   runApp(MyApp());
 }
 

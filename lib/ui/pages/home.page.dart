@@ -4,6 +4,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(-55),
+          child: Container(),
+        ),
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
+        elevation: 0.0,
+        brightness: Brightness.light,
+      ),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
