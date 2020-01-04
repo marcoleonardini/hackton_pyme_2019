@@ -17,6 +17,21 @@ class Providers extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(CupertinoIcons.search, color: Colors.black, size: 24.0),
+            onPressed: () {
+              //TODO: search
+            },
+          ),
+          IconButton(
+            icon: Icon(CupertinoIcons.person_add_solid,
+                color: Colors.black, size: 28.0),
+            onPressed: () {
+              //TODO: add provider
+            },
+          )
+        ],
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
           icon: Icon(CupertinoIcons.back, color: Colors.black),
@@ -37,7 +52,6 @@ class Body extends StatelessWidget {
   Widget _contact(String url, BuildContext context) {
     return InkWell(
       onTap: () {
-        print(url);
         if (url != null && url.length > 5) {
           launch(url);
         } else {

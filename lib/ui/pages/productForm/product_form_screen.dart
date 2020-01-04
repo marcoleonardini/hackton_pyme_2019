@@ -30,6 +30,7 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
@@ -94,7 +95,7 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
             CustomInputField(
               controller: _providerController,
               hintText: 'Ingresa el proveedor del producto',
-              labelText: 'Proovedor',
+              labelText: 'Proveedor',
               icon: Icon(Icons.people),
               inputType: TextInputType.text,
             ),
@@ -102,8 +103,8 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
             CustomButton(
               child: Text("Guardar"),
               icon: Icon(Icons.save),
-              textColor: Colors.black,
-              backgroundColor: Colors.white,
+              textColor: Colors.white,
+              backgroundColor: Colors.blue,
               onPressed: () {},
             ),
           ],

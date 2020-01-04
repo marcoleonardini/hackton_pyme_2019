@@ -26,10 +26,7 @@ class HomePage extends StatelessWidget {
             Flexible(
               flex: 1,
               child: Column(
-                children: <Widget>[
-                  Divider(),
-                  _config(context),
-                ],
+                children: <Widget>[Divider(), _config(context)],
               ),
             ),
           ]),
@@ -66,10 +63,6 @@ class HomePage extends StatelessWidget {
               ),
               Flexible(
                   flex: 1, child: Image.asset('assets/stock.png', width: 64))
-              // Icon(
-              //   Icons.inbox,
-              //   size: 56,
-              // ),
             ],
           ),
         ),
@@ -84,7 +77,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             GestureDetector(
-              onTap: () { 
+              onTap: () {
                 Navigator.pushNamed(context, 'incomes');
               },
               child: Column(
@@ -105,7 +98,7 @@ class HomePage extends StatelessWidget {
             ),
             VerticalDivider(),
             GestureDetector(
-              onTap: () { 
+              onTap: () {
                 Navigator.pushNamed(context, 'sales');
               },
               child: Column(
@@ -173,7 +166,7 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: GestureDetector(
-                onTap: () =>Navigator.pushNamed(context, 'providers'),
+                onTap: () => Navigator.pushNamed(context, 'providers'),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
@@ -186,7 +179,7 @@ class HomePage extends StatelessWidget {
             ),
             VerticalDivider(),
             Expanded(
-              child: GestureDetector(
+              child: InkWell(
                 onTap: () {},
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -194,10 +187,6 @@ class HomePage extends StatelessWidget {
                     Image.asset('assets/settings.png', width: 28.0),
                     Text('CONFIGURACIÓN',
                         style: Theme.of(context).textTheme.display2),
-                    // Container(
-                    //   child:
-                    //       Text('Configura tu App', textAlign: TextAlign.center),
-                    // ),
                   ],
                 ),
               ),

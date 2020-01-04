@@ -43,9 +43,17 @@ class Inventory extends StatelessWidget {
         elevation: 0,
       ),
       body: Container(
-          margin: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+          margin: EdgeInsets.only(top: 8),
           padding: EdgeInsets.only(left: 16.0, right: 16.0),
-          child: ListElements()),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Text('Revisa el estado actual de tus inventarios',
+                  style: TextStyle(color: Colors.grey)),
+              SizedBox(height: 8.0),
+              Expanded(child: ListElements()),
+            ],
+          )),
     );
   }
 }
