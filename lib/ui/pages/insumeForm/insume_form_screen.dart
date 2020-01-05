@@ -9,16 +9,20 @@ class InsumeFormScreen extends StatefulWidget {
 }
 
 class _InsumeFormScreenState extends State<InsumeFormScreen> {
-  
   TextEditingController _nameController;
   TextEditingController _quantityController;
   TextEditingController _priceController;
   TextEditingController _typeController;
   TextEditingController _providerController;
 
+  String _name;
+  int _quantity;
+  double _price;
+  String _type;
+  String _provider;
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _nameController = new TextEditingController();
     _quantityController = new TextEditingController();
@@ -26,90 +30,106 @@ class _InsumeFormScreenState extends State<InsumeFormScreen> {
     _typeController = new TextEditingController();
     _providerController = new TextEditingController();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: Icon(CupertinoIcons.back, color: Colors.black),
-        ),
-        brightness: Brightness.light,
-        title: Text("Añade un nuevo insumo", style: Theme.of(context).textTheme.title),
-        centerTitle: true,
         backgroundColor: Colors.white,
-        elevation: 0,
-      ),
-      body: Container(
-        padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
-        child: ListView(
-          children: <Widget>[
-            Container(
-              height: 140.0,
-              width: 140.0,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.black,
-                  style: BorderStyle.solid,
-                  width: 4.0
-                ),
-                borderRadius: BorderRadius.circular(8.0)
-              ),
-              child: Center(child: Text("Imagen no seleccionada")),
-            ),
-            SizedBox(height: 20.0),
-            CustomButton(
-              child: Text("Selecciona una imagen"),
-              icon: Icon(Icons.image),
-              textColor: Colors.black,
-              backgroundColor: Colors.white,
-              onPressed: () {},
-            ),
-            SizedBox(height: 10.0,),
-            CustomInputField(
-              controller: _nameController,
-              hintText: 'Ingresa el nombre del insumo',
-              labelText: 'Nombre',
-              icon: Icon(Icons.shopping_cart),
-              inputType: TextInputType.text,
-            ),
-            SizedBox(height: 10.0,),
-            CustomInputField(
-              controller: _quantityController,
-              hintText: 'Ingresa la cantidad del insumo',
-              labelText: 'Cantidad',
-              icon: Icon(Icons.show_chart),
-              inputType: TextInputType.number,
-            ),
-            SizedBox(height: 10.0,),
-            CustomInputField(
-              controller: _typeController,
-              hintText: 'Ingresa el tipo del insumo',
-              labelText: 'Tipo',
-              icon: Icon(Icons.sort),
-              inputType: TextInputType.text,
-            ),
-            SizedBox(height: 10.0,),
-            CustomInputField(
-              controller: _providerController,
-              hintText: 'Ingresa el proveedor del insumo',
-              labelText: 'Proveedor',
-              icon: Icon(Icons.people),
-              inputType: TextInputType.text,
-            ),
-            SizedBox(height: 20.0,),
-            CustomButton(
-              child: Text("Guardar"),
-              icon: Icon(Icons.save),
-              textColor: Colors.white,
-              backgroundColor: Colors.blue,
-              onPressed: () {},
-            ),
-          ],
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: Icon(CupertinoIcons.back, color: Colors.black),
+          ),
+          brightness: Brightness.light,
+          title: Text("Añade un nuevo insumo",
+              style: Theme.of(context).textTheme.title),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          elevation: 0,
         ),
-      )
-    );
+        body: GestureDetector(
+          //when tap anywhere, to close keyboard 
+          onTap: () => FocusScope.of(context).requestFocus(new FocusNode()),
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
+            child: ListView(
+              children: <Widget>[
+                Container(
+                  height: 140.0,
+                  width: 140.0,
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Colors.black,
+                          style: BorderStyle.solid,
+                          width: 4.0),
+                      borderRadius: BorderRadius.circular(8.0)),
+                  child: Center(child: Text("Imagen no seleccionada")),
+                ),
+                SizedBox(height: 20.0),
+                CustomButton(
+                  child: Text("Selecciona una imagen"),
+                  icon: Icon(Icons.image),
+                  textColor: Colors.black,
+                  backgroundColor: Colors.white,
+                  onPressed: () {},
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                CustomInputField(
+                  getText: (String text) => setState(() => _name = text),
+                  controller: _nameController,
+                  hintText: 'Ingresa el nombre del insumo',
+                  labelText: 'Nombre',
+                  icon: Icon(Icons.shopping_cart),
+                  inputType: TextInputType.text,
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                CustomInputField(
+                  getText: (String text) => setState(() => _quantity = int.parse(text)),
+                  controller: _quantityController,
+                  hintText: 'Ingresa la cantidad del insumo',
+                  labelText: 'Cantidad',
+                  icon: Icon(Icons.show_chart),
+                  inputType: TextInputType.number,
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                CustomInputField(
+                  getText: (String text) => setState(() => _type = text),
+                  controller: _typeController,
+                  hintText: 'Ingresa el tipo del insumo',
+                  labelText: 'Tipo',
+                  icon: Icon(Icons.sort),
+                  inputType: TextInputType.text,
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                CustomInputField(
+                  getText: (String text) => setState(() => _provider = text),
+                  controller: _providerController,
+                  hintText: 'Ingresa el proveedor del insumo',
+                  labelText: 'Proveedor',
+                  icon: Icon(Icons.people),
+                  inputType: TextInputType.text,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                CustomButton(
+                  child: Text("Guardar"),
+                  icon: Icon(Icons.save),
+                  textColor: Colors.white,
+                  backgroundColor: Colors.blue,
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }

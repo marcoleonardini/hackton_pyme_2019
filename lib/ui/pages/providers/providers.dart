@@ -27,9 +27,7 @@ class Providers extends StatelessWidget {
           IconButton(
             icon: Icon(CupertinoIcons.person_add_solid,
                 color: Colors.black, size: 28.0),
-            onPressed: () {
-              //TODO: add provider
-            },
+            onPressed: () => Navigator.pushNamed(context, 'providersForm'),
           )
         ],
         leading: IconButton(

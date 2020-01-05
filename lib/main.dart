@@ -4,6 +4,7 @@ import 'package:hackaton_pyme_2019/ui/pages/efective/efective.dart';
 import 'package:hackaton_pyme_2019/ui/pages/incomes/incomes.dart';
 import 'package:hackaton_pyme_2019/ui/pages/productDetail/product_detail_screen.dart';
 import 'package:hackaton_pyme_2019/ui/pages/providers/providers.dart';
+import 'package:hackaton_pyme_2019/ui/pages/providers_form/providers_form.dart';
 import 'package:hackaton_pyme_2019/ui/pages/sales/sales.dart';
 import 'ui/pages/home.page.dart';
 import 'ui/pages/inventory/inventory.dart';
@@ -68,7 +69,8 @@ class MyApp extends StatelessWidget {
         'productForm': (context) => ProductFormScreen(),
         'insumeForm': (context) => InsumeFormScreen(),
         'productDetail': (context) => ProductDetailScreen(),
-        'providers':(context)=> Providers()
+        'providers':(context)=> Providers(),
+        'providersForm':(contextt)=>ProvidersForm()
       },
     );
   }
