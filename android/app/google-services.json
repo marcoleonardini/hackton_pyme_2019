@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "1048499669163",
-    "firebase_url": "https://hackaton-pyme-2019.firebaseio.com",
-    "project_id": "hackaton-pyme-2019",
-    "storage_bucket": "hackaton-pyme-2019.appspot.com"
+    "project_number": "1065346588692",
+    "firebase_url": "https://quanta-53add.firebaseio.com",
+    "project_id": "quanta-53add",
+    "storage_bucket": "quanta-53add.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1048499669163:android:ba61dd2329f27432a78fee",
+        "mobilesdk_app_id": "1:1065346588692:android:2f76e55d707a920dd60701",
         "android_client_info": {
           "package_name": "com.example.hackaton_pyme_2019"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1048499669163-na70af1ubjkfuqh4de2r7228jcnmti1e.apps.googleusercontent.com",
+          "client_id": "1065346588692-88jc6102mj32blliii6vg8csc692l2k9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hackaton_pyme_2019",
+            "certificate_hash": "4f9175cc9760a66f5acaec65c6a9cdc18a8f2843"
+          }
+        },
+        {
+          "client_id": "1065346588692-vs05f5nlddr42bqp9odpqnou0pg729cg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAykMmVfSnJL22hNdoiQNj_O2wp7-xk7kY"
+          "current_key": "AIzaSyD_ny9Pyu_3ssl_HNUSexN7GdKIrsBgBI0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1048499669163-na70af1ubjkfuqh4de2r7228jcnmti1e.apps.googleusercontent.com",
+              "client_id": "1065346588692-vs05f5nlddr42bqp9odpqnou0pg729cg.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
