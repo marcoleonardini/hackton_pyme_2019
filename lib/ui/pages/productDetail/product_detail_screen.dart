@@ -1,15 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hackaton_pyme_2019/models/insume.dart';
+import 'package:hackaton_pyme_2019/ui/pages/productDetail/widgets/content_alert.dart';
 import 'package:hackaton_pyme_2019/ui/widgets/custom_button.dart';
 import 'package:hackaton_pyme_2019/ui/widgets/custom_input_field.dart';
+import 'package:hackaton_pyme_2019/ui/widgets/custom_alerts.dart' as alerts;
+import 'package:hackaton_pyme_2019/data/constant.dart' as constant;
 
 class ProductDetailScreen extends StatefulWidget {
   final String name;
   final String image;
   final String quantity;
   final String price;
+  final Insume insume;
 
-  ProductDetailScreen({this.name, this.image, this.quantity, this.price});
+  ProductDetailScreen(
+      {this.name, this.image, this.quantity, this.price, this.insume});
 
   @override
   _ProductDetailScreenState createState() => _ProductDetailScreenState();
@@ -19,9 +25,36 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
   TextEditingController addQuantityController = new TextEditingController();
   TextEditingController minusQuantityController = new TextEditingController();
 
+  _displayDialog(
+      {BuildContext context,
+      Widget content,
+      double height,
+      double width}) async {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return alerts.CustomAlertDialog(
+            maxHeight: height,
+            content: content,
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          _displayDialog(
+              context: context,
+              height: 300.0,
+              content:
+                  ContentAlertScan(context: context, insume: widget.insume));
+        },
+        child: Center(
+          child: Icon(constant.iconsUser['scan_mobile']),
+        ),
+      ),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () => Navigator.pop(context),

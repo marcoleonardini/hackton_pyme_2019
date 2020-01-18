@@ -20,8 +20,8 @@ class Insume{
     this.tipo,
     this.proveedor
   });
-
-  /*factory Product.fromSnapshot({DocumentSnapshot snapshot}){
+/*
+  factory Product.fromSnapshot({DocumentSnapshot snapshot}){
     return Product(
       cantidad: snapshot.data['cantidad'].toInt(),
       descripcion: snapshot.data['descripcion'],
